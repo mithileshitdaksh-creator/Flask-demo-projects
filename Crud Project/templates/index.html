@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P1</title>
+    <link rel="stylesheet"  href="{{ url_for('static', filename='style.css') }}" >
+</head>
+<body>
+    
+    <form method="post">
+
+        <label for="UserName">USer Name</label><br>
+        <input type="text" name="user" id="UserName"  placeholder="Enter User Name"><br><br>
+
+        <label for="UserPassword">User Password</label><br>
+        <input type="text" name="passworder" id="UserPassword" placeholder="Enter Password"><br><br>
+
+        <button type="submit"  formaction="/Registeration" >Registor</button>
+        <button type="submit"  formaction="/Login"         >Login</button><br><br>
+        
+        <p class="Status">
+        Registeration Status : {{msg}}
+        </p>
+
+
+    </form>
+
+    <!-- <p class="Status">
+        Registeration Status : {{msg}}
+    </p> -->
+
+
+</body>
+</html>
