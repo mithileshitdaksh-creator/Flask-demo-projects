@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <link rel="stylesheet"  href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+
+    <div class="contianer">
+        <h1>Login form</h1>
+        
+        <form method="post">
+
+            <label for="user">USer Name</label><br>
+            <input type="text" name="user" id="user" placeholder="Enter the  user Name"><br><br>
+
+            <label for="pass1">USer Password</label><br>
+            <input type="text" name="pass" id="pass1" placeholder="Enter the  user Name"><br><br>
+
+            <button type="submit"  formaction="/registor">Registor</button>
+            <button type="submit"  formaction="/login"   >Login</button>
+        </form>
+
+        <p>
+            Status : {{ msg }}
+        </p>
+    </div>
+</body>
+</html>
